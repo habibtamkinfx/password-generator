@@ -108,3 +108,30 @@ function updateStrengthLength(password) {
   }
   strengthLabel.textContent = labelText;
 }
+
+copyButton.addEventListener('click', () => {
+  const password = passwordInput.value;
+  if (!password) {
+    alert('No password to copy!');
+    return;
+  }
+  navigator.clipboard
+    .writeText(password)
+    .then(() => {
+      showSuccessMessage();
+    })
+    .catch(() => {
+      alert('Failed to copy password. Please try again.');
+    });
+});‍
+
+function showSuccessMessage() {
+  copyButton.classList.add('fa-check');
+  copyButton.classList.remove('fa-copy');
+  copyButton.style.color = '#4caf50';
+  setTimeout(() => {
+    copyButton.classList.remove('fa-check');
+    copyButton.classList.add('fa-copy');
+    copyButton.style.color = '';
+  }, 2000);
+}
