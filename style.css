@@ -238,6 +238,16 @@ button:active {
   transition: all 0.3s ease;
 }
 
+.weak {
+  background: var(--weak-color);
+}
+.medium {
+  background: var(--medium-color);
+}
+.strong {
+  background: var(--strong-color);
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 1.8rem;
