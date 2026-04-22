@@ -120,8 +120,8 @@ copyButton.addEventListener('click', () => {
     .then(() => {
       showSuccessMessage();
     })
-    .catch(() => {
-      alert('Failed to copy password. Please try again.');
+    .catch((error) => {
+      alert('Failed to copy password. Please try again.', error);
     });
 });
 
