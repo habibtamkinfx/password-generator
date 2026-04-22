@@ -123,7 +123,7 @@ copyButton.addEventListener('click', () => {
     .catch(() => {
       alert('Failed to copy password. Please try again.');
     });
-});‍
+});
 
 function showSuccessMessage() {
   copyButton.classList.add('fa-check');
